@@ -20,8 +20,8 @@ there are four types of polymorphism :
 we are going to talk about each of them separatly.
 
 ##### subtype polymorphism (run time)
-	the subtype polymorphism is when you try to derive a class using a pointe referance of the base class,
-	soo if we call for exemle a mumber function that has been inherited from the base class and overloader in the derived class , the base class inestance of the mumber function will be called, example bellow.
+the subtype polymorphism is when you try to derive a class using a pointe referance of the base class,
+soo if we call for exemle a mumber function that has been inherited from the base class and overloader in the derived class , the base class inestance of the mumber function will be called, example bellow.
 
 Some basic Git commands are:
 ```
