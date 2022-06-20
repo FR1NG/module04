@@ -23,43 +23,9 @@ we are going to talk about each of them separatly.
 	the subtype polymorphism is when you try to derive a class using a pointe referance of the base class,
 	soo if we call for exemle a mumber function that has been inherited from the base class and overloader in the derived class , the base class inestance of the mumber function will be called, example bellow.
 
-
-	#include <iostream>
-
-	class Animal {
-		public:
-			Animal(){};
-			~Animal()
-			{
-				std::cout << "Animal destructor has been called" << std::endl;
-			}
-			void makeSound() const {
-				std::cout << "Animle make a noise" << std::endl;
-			}
-	};
-
-
-	class Dog : public Animal{
-		public:
-			Dog(){};
-			~Dog()
-			{
-				std::cout << "Dog destructor has been called" << std::endl;
-			}
-			void makeSound() const {
-				std::cout << "Dog barks" << std::endl;
-			}
-	};
-
-	int main() {
-		Animal *scrappy = new Dog();
-		scrappy->makeSound();
-
-		return (0);
-	}
+Some basic Git commands are:
 ```
-	the output will be :
-
-
-	Animle make a noise
-```	
+git status
+git add
+git commit
+```
