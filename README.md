@@ -11,8 +11,13 @@ the module 04 in cpp piscine
 the polymorphism means that an entity (function or object ) can behave diffirently int different scenarios.
 ##### types of polymorphism :
 there are four types of polymorphism :
-_ subtype polymorphism (known also as run time polymorphism).
-_ parametric polymorphism (known also as parametric polymorphism).
-_ ad-hoc polymorphism (known also as overloading).
-_ coercion polymorphism (known also as casting).
+
+- subtype polymorphism (known also as run time polymorphism).
+
+- parametric polymorphism (known also as parametric polymorphism).
+
+- ad-hoc polymorphism (known also as overloading).
+
+- coercion polymorphism (known also as casting).
+
 we are going to talk about each of them separatly.
