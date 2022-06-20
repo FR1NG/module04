@@ -66,7 +66,7 @@ the output will be :
 	Animle make a noise
 ```
 
-soo to salve this problem we use the key [virtual] before the declaration of the member funtion in the base class, to create a virtual membre function.
+soo to salve this problem we use the key [virtual](https://www.educba.com/virtual-keyword-in-c-plus-plus/) before the declaration of the member funtion in the base class, to create a virtual membre function.
 also we want to declare the destructor as virtual, becuase if we use a virtual membre function and we didn't use a virtual destructor the derived class constructor will not be called , that will lead to an undifined behavior.
 
 ### example :
