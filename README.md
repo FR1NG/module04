@@ -22,7 +22,7 @@ the subtype polymorphism is when you try to derive a class using a pointe refera
 soo if we call for exemle a mumber function that has been inherited from the base class and overloader in the derived class , the base class inestance of the mumber function will be called, example bellow :
 
 ### example :
-```
+```c++
 
 	#include <iostream>
 
@@ -69,7 +69,7 @@ also we want to declare the destructor as virtual, becuase if we use a virtual m
 
 ### example :
 
-```
+```c++
 
 	#include <iostream>
 
@@ -106,7 +106,7 @@ also we want to declare the destructor as virtual, becuase if we use a virtual m
 		return (0);
 	}
 ```
-the output will be :
+OUTPUT :
  ```
 	Dog barks
 	Dog destructor has been called
@@ -115,13 +115,15 @@ the output will be :
 
 > ## 2.Abstract class
 
-	an abstract class is a class which is maded only to be inherited and not to be extentiated,
-	a class is called abstract class when it contains at least one pure virtual member function,
-	we declare a pure virtual member function by assigning 0 to it on its declaration and declaring it as virtual
+an abstract class is a class which is maded only to be inherited and not to be extentiated.
+
+a class is called abstract class when it contains at least one pure virtual member function.
+
+we declare a pure virtual member function by assigning 0 to it on its declaration and declaring it as virtual.
 
 ### EXAMPLE :
 
-```
+```c++
 	#include <iostream>
 
 	class Animal {
@@ -132,6 +134,7 @@ the output will be :
 	};
 ```
 
-	so we can say that
-	
-I need to highlight these ==very important words==.
+so the member function	`virtual void makeSound() = 0;` is a virtual pure member function, that makes the class an abstract class.
+
+
+
