@@ -115,7 +115,7 @@ OUTPUT :
 
 > ## 2.Abstract class
 
-an abstract class is a class which is maded only to be inherited and not to be extentiated.
+an abstract class is a class which is maded only to be inherited and not to be instantiated.
 
 a class is called abstract class when it contains at least one pure virtual member function.
 
@@ -136,5 +136,45 @@ we declare a pure virtual member function by assigning 0 to it on its declaratio
 
 so the member function	`virtual void makeSound() = 0;` is a virtual pure member function, that makes the class an abstract class.
 
+### ps :
 
+you can not make a new object of the class `Animal`, but you still can make a pointer of `Animal` to refer to an instantiation of a class derived by it
+
+EXAMPLE :
+```c++
+
+	#include <iostream>
+
+	class Animal {
+		public:
+			Animal(){};
+			virtual ~Animal()
+			{
+				std::cout << "Animal destructor has been called" << std::endl;
+			}
+			virtual void makeSound() const = 0 {
+				std::cout << "Animle make a noise" << std::endl;
+			}
+	};
+
+
+	class Dog : public Animal{
+		public:
+			Dog(){};
+			~Dog()
+			{
+				std::cout << "Dog destructor has been called" << std::endl;
+			}
+			void makeSound() const  {
+				std::cout << "Dog barks" << std::endl;
+			}
+	};
+
+	int main() {
+		Animal *scrappy = new Dog(); // we can do this
+		Animal *randomAnimal = new Animal(); // we can't do this
+		delete scrappy;
+		return (0);
+	}
+```
 
