@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchakoub <hchakoub@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/20 11:37:42 by hchakoub          #+#    #+#             */
-/*   Updated: 2022/06/20 14:34:04 by hchakoub         ###   ########.fr       */
+/*   Created: 2022/06/20 14:17:17 by hchakoub          #+#    #+#             */
+/*   Updated: 2022/06/20 15:34:46 by hchakoub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef CAT_HPP
+#define CAT_HPP
+
 #include "Animal.hpp"
-#include "Dog.hpp"
-#include "Cat.hpp"
+#include "Brain.hpp"
 
-int main()
-{
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
+class Cat: public Animal {
+	private:
+		Brain* brain;
+	public:
+		Cat();
+		Cat(const std::string type);
+		Cat(const Cat& cat);
+		Cat& operator=(const Cat& cat);
+		~Cat();
+		
+		void	makeSound(void) const;
+		Brain& getBrain();
+		void	setBrain(const Brain& brain);
+};
 
-	delete meta;
-	delete j;
-	delete i;
-	
-	return (0);
-}
+#endif

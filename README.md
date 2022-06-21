@@ -6,8 +6,8 @@ the module 04 in cpp piscine
 - abstract classes
 - interfaces
 
-### first what is polymorphism and what is the types of polymorphism ?
-#### first thing first , what is the polymorphism means ?
+### what is polymorphism and what is the types of polymorphism ?
+#### first things first , what is the polymorphism means ?
 the polymorphism means that an entity (function or object ) can behave diffirently int different scenarios.
 #### types of polymorphism :
 there are four types of polymorphism :
@@ -17,9 +17,7 @@ there are four types of polymorphism :
 3. ad-hoc polymorphism (known also as overloading).
 4. coercion polymorphism (known also as casting).
 
-we are going to talk about each of them separatly.
-
-1. ## subtype polymorphism (run time)
+> ## 1. subtype polymorphism (run time)
 the subtype polymorphism is when you try to derive a class using a pointe referance of the base class,
 soo if we call for exemle a mumber function that has been inherited from the base class and overloader in the derived class , the base class inestance of the mumber function will be called, example bellow :
 
@@ -114,3 +112,26 @@ the output will be :
 	Dog destructor has been called
 	Animal destructor has been called
 ```
+
+> ## 2.Abstract class
+
+	an abstract class is a class which is maded only to be inherited and not to be extentiated,
+	a class is called abstract class when it contains at least one pure virtual member function,
+	we declare a pure virtual member function by assigning 0 to it on its declaration and declaring it as virtual
+
+### EXAMPLE :
+
+```
+	#include <iostream>
+
+	class Animal {
+		public:
+			Animal();
+			~Animal();
+			virtual void makeSound() = 0;
+	};
+```
+
+	so we can say that
+	
+I need to highlight these ==very important words==.

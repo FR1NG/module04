@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchakoub <hchakoub@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/20 11:37:42 by hchakoub          #+#    #+#             */
-/*   Updated: 2022/06/20 14:34:04 by hchakoub         ###   ########.fr       */
+/*   Created: 2022/06/20 14:39:55 by hchakoub          #+#    #+#             */
+/*   Updated: 2022/06/20 17:04:12 by hchakoub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
-#include "Dog.hpp"
-#include "Cat.hpp"
+#ifndef BRAIN_HPP
+#define BRAIN_HPP
 
-int main()
-{
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
+#include <iostream>
 
-	delete meta;
-	delete j;
-	delete i;
-	
-	return (0);
-}
+class Brain {
+	private:
+		std::string ideas[100];
+	public:
+		Brain();
+		Brain(const Brain& brain);
+		Brain& operator=(const Brain& brain);
+		~Brain();
+
+		std::string&  getIdieas();
+};
+
+#endif
