@@ -6,7 +6,7 @@
 /*   By: hchakoub <hchakoub@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 18:16:10 by hchakoub          #+#    #+#             */
-/*   Updated: 2022/06/21 18:17:40 by hchakoub         ###   ########.fr       */
+/*   Updated: 2022/06/23 08:16:02 by hchakoub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,12 @@
 
 class ICharacter
 {
+	private:
+		std::string name;
 	public:
+	ICharacter();
+	ICharacter(const ICharacter& character);
+	ICharacter& operator=(const ICharacter& character);
 	virtual ~ICharacter() {}
 	virtual std::string const & getName() const = 0;
 	virtual void equip(AMateria* m) = 0;

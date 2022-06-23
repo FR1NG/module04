@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ICharacter.cpp                                     :+:      :+:    :+:   */
+/*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchakoub <hchakoub@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/21 18:16:16 by hchakoub          #+#    #+#             */
-/*   Updated: 2022/06/23 08:42:31 by hchakoub         ###   ########.fr       */
+/*   Created: 2022/06/21 20:00:14 by hchakoub          #+#    #+#             */
+/*   Updated: 2022/06/21 20:01:40 by hchakoub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ICharacter.hpp"
+#ifndef CURE_HPP
+#define CURE_HPP
 
-ICharacter::ICharacter(){}
+#include "AMateria.hpp"
 
-ICharacter::ICharacter(const ICharacter& character) {}
+class Cure : public AMateria {
+	public:
+		Cure();	
+		Cure(const Cure& cure);
+		Cure& operator=(const Cure& cure);
+		~Cure();
 
-ICharacter& ICharacter::operator=(const ICharacter& character) {}
+		AMateria* clone() const;	
+};
 
-ICharacter::~ICharacter() {}
-
-
-std::string const& ICharacter::getName() const
-{
-	return (this->name);
-}
+#endif

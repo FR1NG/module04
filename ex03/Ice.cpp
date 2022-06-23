@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ICharacter.cpp                                     :+:      :+:    :+:   */
+/*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchakoub <hchakoub@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/21 18:16:16 by hchakoub          #+#    #+#             */
-/*   Updated: 2022/06/23 08:42:31 by hchakoub         ###   ########.fr       */
+/*   Created: 2022/06/21 19:45:39 by hchakoub          #+#    #+#             */
+/*   Updated: 2022/06/21 19:58:08 by hchakoub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ICharacter.hpp"
+#include "Ice.hpp"
 
-ICharacter::ICharacter(){}
+Ice::Ice(): AMateria("ice") {}
 
-ICharacter::ICharacter(const ICharacter& character) {}
+Ice::Ice(const Ice& ice):AMateria(ice.type) {}
 
-ICharacter& ICharacter::operator=(const ICharacter& character) {}
-
-ICharacter::~ICharacter() {}
-
-
-std::string const& ICharacter::getName() const
+Ice& Ice::operator=(const Ice& ice)
 {
-	return (this->name);
+	this->type = ice.type;
+	return (*this);
+}
+
+Ice::~Ice() {}
+
+AMateria* Ice::clone() const {
+	AMateria* clone = new Ice(*this);
+	return(clone);
 }
